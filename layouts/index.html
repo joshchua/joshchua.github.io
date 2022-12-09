@@ -1,8 +1,5 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
 <div>
-    {{ range first 5 .Site.RegularPages }}
-        {{ .Render "summary" }}
-    {{ end }}
+    {{ $headless := .Site.GetPage "/homepage" }}
 </div>
 {{ end }}

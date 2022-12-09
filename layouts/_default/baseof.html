@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="{{ $style.Permalink }}">
     </head>
     <body>
-        <p>base</p>
+        {{ partial "header.html" . }}
         <main aria-role="main">
             {{ block "main" . }}{{ end }}
         </main>
