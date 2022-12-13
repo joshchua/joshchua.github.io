@@ -1,5 +1,33 @@
 {{ define "main" }}
-<div>
-    {{ $headless := .Site.GetPage "/homepage" }}
+<div class="homepageHero">
+    <div class="homepageHero__circle">
+        <div class="homepageHero__image">
+
+        </div>
+    </div>
+    <p class="homepageHero__text">
+        <span class="homepageHero__helloWorld">Hello World!</span><br>
+        My name is <b>Josh Chua</b>. I'm a<br>
+        <b>software engineer</b><br>
+        with expertise in<br>
+        <b>full-stack web development</b> and<br>
+        <b>native and hybrid mobile development</b>.
+    </p>
+    <div class="homepageHero__stars">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+    <span class="homepageHero__scrollIndicator">about me<br>v</span>
+</div>
+
+<div class="content">
+    <article>
+        <h1>About Me</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non velit aliquam est ultrices commodo ut et odio. Suspendisse enim tellus, congue ut metus et, lacinia ullamcorper velit. Fusce tellus diam, sagittis quis arcu ac, blandit placerat tellus. Ut at odio nec nunc ullamcorper posuere. Vestibulum malesuada, purus eget mattis suscipit, nunc sem accumsan quam, sit amet sodales elit ligula sit amet lacus. Praesent malesuada, sapien in placerat eleifend, sapien mi volutpat magna, non eleifend velit risus a lectus. Nullam sollicitudin nulla lectus, id ornare ex sagittis in. Phasellus porta turpis in dapibus suscipit. Sed facilisis, leo nec venenatis cursus, orci quam lacinia est, ac dignissim eros urna nec nunc. Suspendisse potenti. Integer vulputate felis nec neque viverra, ac posuere nunc blandit. Etiam vitae eros ex. Pellentesque vitae ipsum magna. Sed dignissim mauris quis dui convallis fringilla. Mauris ultrices sagittis ex, id bibendum purus scelerisque ac.</p>
+    </article>
+    <aside>
+
+    </aside>
 </div>
 {{ end }}
