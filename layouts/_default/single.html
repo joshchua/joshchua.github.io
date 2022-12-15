@@ -12,16 +12,11 @@
         <div id="stars3"></div>
     </div>
 </div>
-<article class="post">
-    <h1>{{ .Title }}</h1>
-    <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
-    {{/*  <p>  */}}
+<div class="content">
+    <article class="post">
+        <h1>{{ .Title }}</h1>
+        <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
         {{ .Content }}
-    {{/*  </p>  */}}
-</article>
-<aside>
-    <div>
-        
-    </div>
-</aside>
+    </article>
+</div>
 {{ end }}

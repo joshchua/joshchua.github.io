@@ -1,3 +1,5 @@
+@import 'include-media';
+
 /* Font-family variables */
 $font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -124,9 +126,15 @@ a, a:hover, a:link, a:visited {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    // max-width: 800px;
-    padding-left: 5rem;
-    padding-right: 5rem;
+
+    @include media('>phone', '<=tablet') {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    @include media('>tablet') {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
 }
 
 .siteHeader__menuItem {
@@ -146,13 +154,21 @@ a.siteHeader__menuAnchor {
     text-transform: lowercase;
     font-weight: $font-bold;
 
-    padding: 1rem;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 1rem;
+
+    @include media('<=tablet') {
+        @include text-rg();
+        padding: 0.6rem;
+    }
+
+    @include media('>tablet') {
+        @include text-lg();
+        padding: 1rem;
+    }
 
     .siteHeader__menuAnchor__icon {
         padding: 0;
@@ -169,7 +185,13 @@ a.siteHeader__menuAnchor {
     }
 
     &.siteHeader__menuAnchor__main {
-        @include text-2x();
+        @include media('>phone', '<=tablet') {
+            @include text-lg();
+        } 
+
+        @include media('>tablet') {
+            @include text-2x();
+        } 
         font-weight: $font-bold;
 
         &::before {
@@ -206,8 +228,24 @@ a.siteHeader__menuAnchor {
 
 .homepageHero {
     display: flex;
-    gap: 2.5rem;
     
+    @include media('<=tablet') {
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    @include media('>tablet') {
+        flex-direction: row;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    @include media('>tablet', '<=desktop') {   
+        gap: 1rem;
+    }
+    
+    @include media('>desktop') {
+        gap: 2.5rem;
+    }
     
     box-sizing: border-box;
     position: relative;
@@ -219,11 +257,7 @@ a.siteHeader__menuAnchor {
     box-shadow: 0px 2px 18px 3px rgba(#1E0032, 0.5);
     margin-bottom: 5vh;
     overflow: hidden;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-
+    
     color: $color-white;
     font-family: $font-sans;
 
@@ -236,6 +270,10 @@ a.siteHeader__menuAnchor {
         justify-content: center;
         align-items: center;
         height: 90vh;
+
+        @include media('>tablet', '<=desktop') {
+            padding: 0;
+        }
     }
 
     .homepageHero__text {
@@ -244,7 +282,13 @@ a.siteHeader__menuAnchor {
         z-index: 2;
         color: $color-white;
         font-family: $font-sans;
-        @include text-2x();
+
+        @include media('<=tablet') {
+            @include text-xl();
+        }
+        @include media('>tablet') {
+            @include text-2x();
+        }
     }
     
     .homepageHero__helloWorld {
@@ -275,8 +319,6 @@ a.siteHeader__menuAnchor {
     }
 }
 
-
-
 .homepageHero__stars {
     z-index: 1;
     position: absolute;
@@ -291,23 +333,29 @@ a.siteHeader__menuAnchor {
     position: absolute;
     bottom: 1.25rem;
     color: $color-white;
-    // box-shadow: 0px 2px 25px 3px ;
     filter: drop-shadow(1px 2px 10px #AB6786);
 }
 
 /* Content */
 .content {
-    width: 800px;
-    margin: 0 auto;
+    @include media('<=tablet') {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    @include media('>tablet','<=desktop') {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    @include media('>desktop') {
+        width: 1000px;
+        margin: 0 auto;
+    }
 }
 
 /* Footer */
 .siteFooter {
     display: flex;
     justify-content: center;
-    // margin-top: 0.5rem;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     padding: 1rem;
 }
 
@@ -382,8 +430,10 @@ a.siteHeader__menuAnchor {
 
 .summaryList {
     display: block;
-    width: 800px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    // width: 800px;
+    // margin: 0 auto;
     // padding-left: 5rem;
     // padding-right: 5rem;
     list-style-type: none;
@@ -400,9 +450,4 @@ a.siteHeader__menuAnchor {
             text-decoration: underline;
         }
     }
-}
-
-.post {
-    width: 800px;
-    margin: 0 auto;
 }
