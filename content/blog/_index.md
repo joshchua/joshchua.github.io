@@ -1,4 +1,4 @@
 ---
 title: "Josh's Blog"
-description: 'A collection of posts ranging from software development, gaming, and random thoughts.'
+description: 'A collection of posts with topics ranging from software development to random thoughts.'
 ---

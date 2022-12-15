@@ -12,11 +12,9 @@
       <div id="stars3"></div>
   </div>
 </div>
-<main>
-  <div>
-    {{ range .Pages }}
-      {{ .Render "summary" }}
-    {{ end }}
-  </div>
-</main>
+<ul class="summaryList">
+  {{ range .Pages }}
+    {{ .Render "summary" }}
+  {{ end }}
+</ul>
 {{ end }}

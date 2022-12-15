@@ -1,9 +1,7 @@
-<a href="{{ .Permalink }}">
-    <div>{{ .Title }}</div>
-    <div>{{ .Summary }}</div>
+<li class="summaryItem">
+    <a class="summaryItem__title" href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
     <div>
-        <span>{{ .ReadingTime }} Minutes</span>
         <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-        <span>{{ .WordCount }} Words</span>
     </div>
-</a>
+    <p>{{ .Summary }} <a href="{{ .Permalink}}">Read more...</a></p>
+</li>

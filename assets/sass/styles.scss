@@ -85,7 +85,7 @@ html, body {
 main {
     flex: 1 0 auto;
     background-color: $color-white;
-    // padding-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 footer {
@@ -100,6 +100,10 @@ p {
 
 h1 {
     @include text-2x();
+}
+
+a, a:hover, a:link, a:visited {
+    color: #330c4e;
 }
 
 /* Utility */
@@ -135,7 +139,7 @@ h1 {
     }
 }
 
-.siteHeader__menuAnchor {
+a.siteHeader__menuAnchor {
     color: $color-white;
     text-align: center;
     text-decoration: none;
@@ -376,6 +380,29 @@ h1 {
     }
 }
 
-.content {
-    
+.summaryList {
+    display: block;
+    width: 800px;
+    margin: 0 auto;
+    // padding-left: 5rem;
+    // padding-right: 5rem;
+    list-style-type: none;
+}
+
+.summaryItem {
+    margin-bottom: 3rem;
+
+    .summaryItem__title {
+        text-decoration: none;
+        color: $color-black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.post {
+    width: 800px;
+    margin: 0 auto;
 }

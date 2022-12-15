@@ -1,24 +1,27 @@
 {{ define "main" }}
-<section>
-    <h1>{{ .Title }}</h1>
+<div class="homepageHero">
     <div>
-        <article>
-            {{ .Content }}
-        </article>
+      <h1>{{ .Parent.Title }}</h1>
+      <p> 
+          {{ .Parent.Description }}
+      </p>
     </div>
-</section>
+    <div class="homepageHero__stars">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+</div>
+<article class="post">
+    <h1>{{ .Title }}</h1>
+    <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
+    {{/*  <p>  */}}
+        {{ .Content }}
+    {{/*  </p>  */}}
+</article>
 <aside>
     <div>
-        <h4>{{ .Date.Format "Mon Jan 2, 2006" }}</h4>
-        <h5>{{ .WordCount }} Words</h5>
+        
     </div>
-    <div>
-        {{ with .PrevInSection }}
-        <a class="previous" href="{{ .Permalink }}"> {{.Title}}</a>
-        {{ end }}
-        {{ with .NextInSection }}
-        <a class="next" href="{{ .Permalink }}"> {{.Title}}</a>
-        {{ end }}
-     </div>
 </aside>
 {{ end }}
