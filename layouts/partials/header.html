@@ -1,8 +1,24 @@
 <header class="siteHeader">
-    <div class="siteHeader__menuAnchor siteHeader__menuAnchor__main siteHeader__menuAnchor__active" href="/">Josh Chua</div>
     <menu class="siteHeader__menu">
-        <li class="siteHeader__menuItem"><a class="siteHeader__menuAnchor" href="/">Resume</a></li>
-        <li class="siteHeader__menuItem"><a class="siteHeader__menuAnchor" href="/">Projects</a></li>
-        <li class="siteHeader__menuItem"><a class="siteHeader__menuAnchor " href="/">Blog</a></li>
+        <li class="siteHeader__menuItem">
+            <a class="siteHeader__menuAnchor siteHeader__menuAnchor__main siteHeader__menuAnchor__active" href="/">
+                Josh Chua
+            </a>
+        </li>
+        <li class="siteHeader__menuItem"><a class="siteHeader__menuAnchor" href="https://github.com/joshchua/resume">Resume</a></li>
+        <li class="siteHeader__menuItem"><a class="siteHeader__menuAnchor" href="/blog">Blog</a></li>
+        <div class="spacer siteHeader__menuItem"></div>
+        <li class="siteHeader__menuItem">
+            <a class="siteHeader__menuAnchor siteHeader__menuAnchor__icon" href="https://github.com/joshchua">
+                {{ $githubImage := resources.Get "svg/github-mark.svg" }}
+                <img class="siteHeader__menuImage" src="{{ $githubImage.RelPermalink }}" width="30">
+            </a>
+        </li>
+        <li class="siteHeader__menuItem">
+            <a class="siteHeader__menuAnchor siteHeader__menuAnchor__icon" href="https://www.linkedin.com/in/joshjchua">
+                {{ $linkedInImage := resources.Get "png/In-Blue-Logo.png" }}
+                <img class="siteHeader__menuImage" src="{{ $linkedInImage.RelPermalink }}" width="30">
+            </a>
+        </li>
     </menu>
 </header>

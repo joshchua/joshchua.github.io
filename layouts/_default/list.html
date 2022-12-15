@@ -1,8 +1,18 @@
 {{ define "main" }}
-<main>
-  <header>
+<div class="homepageHero">
+  <div>
     <h1>{{ .Title }}</h1>
-  </header>
+    <p> 
+        {{ .Description }}
+    </p>
+  </div>
+  <div class="homepageHero__stars">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+  </div>
+</div>
+<main>
   <div>
     {{ range .Pages }}
       {{ .Render "summary" }}
