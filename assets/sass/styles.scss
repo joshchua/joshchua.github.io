@@ -242,7 +242,7 @@ a.siteHeader__menuAnchor {
     @include media('>tablet', '<=desktop') {   
         gap: 1rem;
     }
-    
+
     @include media('>desktop') {
         gap: 2.5rem;
     }
@@ -432,10 +432,6 @@ a.siteHeader__menuAnchor {
     display: block;
     margin: 0;
     padding: 0;
-    // width: 800px;
-    // margin: 0 auto;
-    // padding-left: 5rem;
-    // padding-right: 5rem;
     list-style-type: none;
 }
 
