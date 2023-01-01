@@ -11,9 +11,9 @@ development, playing Magic: The Gathering, or playing video games (likely a
 Nintendo or fighting game). 
 
 While I attended a traditional computer science program in university, I
-actually taught myself to code when I was 12 years old and my first programming
+actually taught myself to code when I was 12 years old, and my first programming
 language was C#. In middle school, I made simple games using Windows Forms and
-.NET WPF. Later on in high school, I learned JavaScript and web development
+.NET WPF. In high school, I taught myself JavaScript and web development
 technologies, such as Knockout, Angular.js, and .NET MVC. I also started and ran a
 computer programming club in high school and taught other students basic web
 development. (Fun fact: I also started and ran an eSports club too.)
