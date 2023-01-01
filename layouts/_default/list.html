@@ -13,10 +13,14 @@
   </div>
 </div>
 <div class="content">
+  {{ if and (isset .Params "emptymessage") (eq (len .Pages) 0) }}
+    <span class="emptyListMessage">{{ .Params.emptymessage }}</span>
+  {{ end }}
   <ul class="summaryList">
     {{ range .Pages }}
       {{ .Render "summary" }}
     {{ end }}
   </ul>
 </div>
+
 {{ end }}

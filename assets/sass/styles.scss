@@ -85,6 +85,8 @@ html, body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     flex: 1 0 auto;
     background-color: $color-white;
     padding-bottom: 1rem;
@@ -255,7 +257,7 @@ a.siteHeader__menuAnchor {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 0px 2px 18px 3px rgba(#1E0032, 0.5);
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
     overflow: hidden;
     
     color: $color-white;
@@ -338,6 +340,9 @@ a.siteHeader__menuAnchor {
 
 /* Content */
 .content {
+    // height: 100%;
+    // display: flex;
+    flex: 1;
     @include media('<=tablet') {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -352,16 +357,88 @@ a.siteHeader__menuAnchor {
     }
 }
 
-/* Footer */
-.siteFooter {
+.emptyListMessage {
+    font-weight: $font-bold;
+    @include text-xl();
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    align-items: center;
 }
 
-.siteFooter__copyright {
-    color: $color-white;
-    @include text-sm();
+/* Footer */
+.siteFooter {
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 0;
+        height: 0.25rem;
+        background: transparent;
+        background: linear-gradient(to left, #5F70FF, #B05ED6, #FF9FCA);
+        // box-shadow: 0px 0px 25px 3px #AB6786;
+        z-index: 5;
+    }
+    // background-color: red;
+    @include media('>phone', '<=tablet') {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    @include media('>tablet') {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    position: relative;
+    // padding-top: 1rem;
+    // border-top: 0.3rem solid #D67ED1;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+
+    .siteFooter__title {
+        color: $color-white;
+        text-align: center;
+        text-decoration: none;
+        text-transform: lowercase;
+        font-weight: $font-bold;
+        @include media('>phone', '<=tablet') {
+            @include text-lg();
+        } 
+
+        @include media('>tablet') {
+            @include text-2x();
+        } 
+        font-weight: $font-bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .siteFooter__copyright {
+        color: $color-white;
+        @include text-xs();
+    }
+
+    .siteFooter__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        a {
+            font-weight: $font-bold;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: lowercase;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 #stars {
