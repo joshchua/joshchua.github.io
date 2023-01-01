@@ -340,8 +340,6 @@ a.siteHeader__menuAnchor {
 
 /* Content */
 .content {
-    // height: 100%;
-    // display: flex;
     flex: 1;
     @include media('<=tablet') {
         padding-left: 1rem;
