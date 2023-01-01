@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="homepageHero homepageHero__full">
     <div class="homepageHero__circle">
-        {{ $joshImage := resources.Get "jpg/josh.jpg" }}
+        {{ $joshImage := resources.Get "/jpg/josh.jpg" }}
         <img class="homepageHero__image" src="{{ $joshImage.RelPermalink }}">
     </div>
     <p class="homepageHero__text">
@@ -17,7 +17,7 @@
         <div id="stars2"></div>
         <div id="stars3"></div>
     </div>
-    {{ $arrowImage := resources.Get "svg/icon-arrow-down.svg" }}
+    {{ $arrowImage := resources.Get "/svg/icon-arrow-down.svg" }}
     <img class="homepageHero__scrollIndicator" src="{{ $arrowImage.RelPermalink }}" width="30">
 </div>
 

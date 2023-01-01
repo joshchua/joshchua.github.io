@@ -10,13 +10,13 @@
         <div class="spacer siteHeader__menuItem"></div>
         <li class="siteHeader__menuItem">
             <a class="siteHeader__menuAnchor siteHeader__menuAnchor__icon" href="https://github.com/joshchua">
-                {{ $githubImage := resources.Get "svg/github-mark.svg" }}
+                {{ $githubImage := resources.Get "/svg/github-mark.svg" }}
                 <img class="siteHeader__menuImage" src="{{ $githubImage.RelPermalink }}" width="30">
             </a>
         </li>
         <li class="siteHeader__menuItem">
             <a class="siteHeader__menuAnchor siteHeader__menuAnchor__icon" href="https://www.linkedin.com/in/joshjchua">
-                {{ $linkedInImage := resources.Get "png/In-Blue-Logo.png" }}
+                {{ $linkedInImage := resources.Get "/png/In-Blue-Logo.png" }}
                 <img class="siteHeader__menuImage" src="{{ $linkedInImage.RelPermalink }}" width="30">
             </a>
         </li>
