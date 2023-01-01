@@ -273,6 +273,10 @@ a.siteHeader__menuAnchor {
         align-items: center;
         height: 90vh;
 
+        @include media('<tablet') {
+            height: 80vh;
+        }
+
         @include media('>tablet', '<=desktop') {
             padding: 0;
         }
@@ -376,7 +380,6 @@ a.siteHeader__menuAnchor {
         height: 0.25rem;
         background: transparent;
         background: linear-gradient(to left, #5F70FF, #B05ED6, #FF9FCA);
-        // box-shadow: 0px 0px 25px 3px #AB6786;
         z-index: 5;
     }
     // background-color: red;
@@ -389,8 +392,6 @@ a.siteHeader__menuAnchor {
         padding-right: 5rem;
     }
     position: relative;
-    // padding-top: 1rem;
-    // border-top: 0.3rem solid #D67ED1;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
