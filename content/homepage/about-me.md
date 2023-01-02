@@ -18,7 +18,7 @@ technologies, such as Knockout, Angular.js, and .NET MVC. I also started and ran
 computer programming club in high school and taught other students basic web
 development. Fun fact: I also started and ran an eSports club too.
 
-In May of 2020, I graduated with a bachelor's degree in computer science with 
+In May of 2020 I graduated with a bachelor's degree in computer science with 
 a minor in general business from Grand Valley State University.
 While in school, I was busy with both full-time school and part-time work, and I even
 had 3 concurrent part-time jobs in my junior year. I started out with a retail job, 
@@ -30,7 +30,7 @@ Then, at Steelcase I worked on building monitoring tools for their industrial Io
 
 Now at Epic, I'm a software developer team lead on Epic's Unified Communications team where I lead, design, and develop solutions for clinical
 communications and patient device alerting. I work on a unique team that does 
-full-stack web and native mobile development for iOS and Android. 
+full-stack web development for the desktop and native mobile development for iOS and Android. 
 
 If you would like to hear more about my experience or would simply like to connect,
 please reach out via [email](mailto:joshjchua@protonmail.com) or LinkedIn. I plan on starting a blog about computer programming and software development, so please keep an eye out for that!
