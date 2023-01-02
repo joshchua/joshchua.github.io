@@ -30,7 +30,7 @@ Then, at Steelcase I worked on building monitoring tools for their industrial Io
 
 Now at Epic, I'm a software developer team lead on Epic's Unified Communications team where I lead, design, and develop solutions for clinical
 communications and patient device alerting. I work on a unique team that does 
-full-stack web development for the desktop and native mobile development for iOS and Android. 
+full-stack web development for desktop and native mobile development for iOS and Android. 
 
 If you would like to hear more about my experience or would simply like to connect,
 please reach out via [email](mailto:joshjchua@protonmail.com) or LinkedIn. I plan on starting a blog about computer programming and software development, so please keep an eye out for that!
