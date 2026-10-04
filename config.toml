@@ -1,3 +1,7 @@
-baseURL = 'https://joshchua.github.io'
-languageCode = 'en-us'
+baseURL = 'https://joshchua.com/'
+locale = 'en-us'
 title = 'Josh Chua'
+disableKinds = ['page', 'section', 'taxonomy', 'term', 'RSS', 'sitemap', 'robotsTXT', '404']
+
+[outputs]
+  home = ['HTML']

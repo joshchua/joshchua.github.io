@@ -1,33 +1,31 @@
-{{ define "main" }}
-<div class="homepageHero homepageHero__full">
-    <div class="homepageHero__circle">
-        {{ $joshImage := resources.Get "/jpg/josh.jpg" }}
-        <img class="homepageHero__image" src="{{ $joshImage.RelPermalink }}">
-    </div>
-    <p class="homepageHero__text">
-        <span class="homepageHero__helloWorld">Hello World!</span><br>
-        My name is <b>Josh Chua</b>. I'm a<br>
-        <b>software engineer</b><br>
-        with expertise in<br>
-        <b>full-stack web development</b> and<br>
-        <b>native and hybrid mobile development</b>.
-    </p>
-    <div class="homepageHero__stars">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-    </div>
-    {{ $arrowImage := resources.Get "/svg/icon-arrow-down.svg" }}
-    <img class="homepageHero__scrollIndicator" src="{{ $arrowImage.RelPermalink }}" width="30">
-</div>
-
-<div class="content">
-    <article>
-        {{ $headless := .Site.GetPage "/homepage" }}
-        {{ $reusablePages := $headless.Resources.Match "about-me.md" }}
-        {{ with index $reusablePages 0 }}
-            {{ .Content }}
-        {{ end }}
-    </article>
-</div>
-{{ end }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Josh Chua — Building products and engineering systems for health and healthcare.">
+  <meta name="theme-color" content="#f4f3ef">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <title>{{ .Site.Title }}</title>
+  {{ $style := resources.Get "css/home.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  {{ $script := resources.Get "js/triangles.js" | minify | fingerprint }}
+  <script src="{{ $script.RelPermalink }}" defer></script>
+</head>
+<body>
+  <canvas id="triangles" aria-hidden="true"></canvas>
+  <main>
+    <section class="profile-card" aria-labelledby="profile-name">
+      <header class="profile-header">
+        <h1 id="profile-name">Josh Chua</h1>
+        <p class="tagline">Building products and engineering systems for health and <span class="tagline-ending">healthcare {{ (resources.Get "icons/bootstrap/heart-fill.svg").Content | safeHTML }}</span></p>
+        <p class="career"><span>Senior iOS Software Engineer @ Apple Health</span> <span>Previously, Software Development Team Lead @ Epic Systems</span></p>
+      </header>
+      <nav aria-label="Find Josh online">
+        <a href="https://github.com/joshchua" aria-label="GitHub" title="GitHub">{{ (resources.Get "icons/bootstrap/github.svg").Content | safeHTML }}</a>
+        <a href="https://www.linkedin.com/in/joshjchua" aria-label="LinkedIn" title="LinkedIn">{{ (resources.Get "icons/bootstrap/linkedin.svg").Content | safeHTML }}</a>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>
